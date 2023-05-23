@@ -54,20 +54,6 @@ resource "aws_instance" "public-instances" {
 
 }
 
-# inline = [
-#   # "sudo -i",
-#   # "echo 'Hello from provisinoer' > /test.txt"
-#   # "echo 'location / { proxy_pass http://${var.private-dns-name} ; }}'  >> ~/default  ",
-#   # "sudo mv ~/default /etc/nginx/sites-enabled/"
-#   "sudo unlink /etc/nginx/sites-enabled/default",
-#   "sudo sh -c 'echo \"server { \n listen 80; \n location / { \n   proxy_pass http://${var.private-dns-name}; \n }  \n  }\" > /etc/nginx/sites-available/reverse-proxy.conf'",
-#   "sudo ln -s /etc/nginx/sites-available/reverse-proxy.conf /etc/nginx/sites-enabled/reverse-proxy.conf",
-#   "sudo systemctl restart nginx"
-# ]
-# echo "location / { proxy_pass ${module.netowrk-settings.public-load-balancer-dns}; }} " >> /etc/nginx/sites-enabled/default
-
-# systemctl restart nginx
-
 
 resource "aws_instance" "private-instances" {
   count                  = length(var.piravte-instances-subnets-ids)
