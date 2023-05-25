@@ -1,4 +1,5 @@
 ### Project Specifications:
+![image](https://github.com/Abdullah-Elkasaby/terraform-aws-project/assets/97049761/a8d6f4ea-cf5e-426e-84aa-2b3ce116f01a)
 
 **1. Workspace:**
 A new workspace called "dev" was created to work on the project, providing better isolation and organization of resources during development.
